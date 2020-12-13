@@ -1,0 +1,102 @@
+/*
+1. Posicionamiento
+2. Modelo de Caja (Box Model)
+3. Tipografía
+4.Visuales
+5.Otros
+*/
+:root {
+    /* Colores */
+--bitcoin-orange: #f7931a;
+--soft-orange: #ffe9d5;
+--secondary-blue: #1a9af7;
+--soft-blue: #e7f5ff;
+--warm-black: #282623;
+--black: #201e1c;
+--grey: #bababa;
+--off-white: #faf8f7;
+--just-white: #fff;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-size: 100%;
+    font-family: 'DM Sans', sans-serif;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
+}
+ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none!important; 
+}
+a {
+    text-decoration: none!important;
+}
+/**************** GENERAL *****************/
+.Position--Relative     { position: relative !important; }
+.Position--Absolute     { position: absolute !important; }
+.Full--Width            { width : 100%; }
+.Full--Height           { height: 100%; }
+.Overflow--Auto        { overflow: auto!important;}
+
+/***************  Letter Spacing  ***************/
+.LetterSpacing_N {letter-spacing: normal;}
+.L-S-3 {letter-spacing: 1px;}
+.L-S-2 {letter-spacing: 0.5px;}
+.L-S-1 {letter-spacing: 0.25px;}
+.L-S-05 {letter-spacing: -0.05px;}
+.L-S-n1 {letter-spacing: -0.1px;}
+.LineHeight-Initial {line-height: initial; }
+.L-H-1 {line-height: 1; }
+.L-H-2 {line-height: 1.2; }
+.L-H-3 {line-height: 1.3; }
+.L-H-4 {line-height: 1.4; }
+.L-H-5 {line-height: 1.5; }
+
+/************* Fuentes Tamaños *************/
+.FontsSize-10 { font-size: 10px !important;}
+.FontsSize-11 { font-size: 11px !important;}
+.FontsSize-12 { font-size: 12px !important;}
+.FontsSize-13 { font-size: 13px !important;}
+.FontsSize-14 { font-size: 14px !important;}
+.FontsSize-15 { font-size: 15px !important;}
+.FontsSize-16 { font-size: 16px !important;}
+.FontsSize-17 { font-size: 17px !important;}
+.FontsSize-18 { font-size: 18px !important;}
+.FontsSize-19 { font-size: 19px !important;}
+.FontsSize-20 { font-size: 20px !important;}
+.FontsSize-22 { font-size: 22px !important;}
+.FontsSize-23 { font-size: 23px !important;}
+.FontsSize-24 { font-size: 24px !important;}
+.FontsSize-30 { font-size: 30px !important;}
+.FontsSize-45 { font-size: 45px !important;}
+
+/**************** Estilos Fuentes ****************/
+.X-Light { font-weight: 200; }
+.Light {font-weight: 300!important; }
+.Regular {font-weight: 400!important;}
+.Medium { font-weight: 500!important;}
+.Semibold { font-weight: 600!important;}
+.Bold { font-weight:700!important;}
+.Extra-Bold { font-weight:800!important;}
+.Black { font-weight:900!important;}
+.LightItalic {font-style: italic;}
+
+.Box_Shadow  { box-shadow: 0 5px 6px rgba(0, 0, 0, 0.12) !important;}
+
+
+/**************** Colores ****************/
+.Color-Light        { color: var(--just-white);}
+.Color-Light-xx     { color: var(--light-xx);}
+.Color-Muted        { color: var(--Muted);}
+
+.BK-Color-Light        { background-color: var(--light);}
+.BK-Color-Light-xx     { background-color: var(--light-xx);}
+.BK-Color-Gray-xx     { background-color: var(--Gray-xx);}
+.BK-Color-Gray-x       { background-color: var(--Gray-x);}
