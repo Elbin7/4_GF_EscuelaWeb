@@ -2,8 +2,8 @@
 1. Posicionamiento
 2. Modelo de Caja (Box Model)
 3. Tipografía
-4.Visuales
-5.Otros
+4. Visuales
+5. Otros
 */
 
 :root {
@@ -29,7 +29,7 @@ html {
     font-family: 'Titillium Web', sans-serif;
     background-color: var(--black);
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='105' viewBox='0 0 80 105'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='death-star' fill='%23540606' fill-opacity='0.4'%3E%3Cpath d='M20 10a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V10zm15 35a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V45zM20 75a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V75zm30-65a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V10zm0 65a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V75zM35 10a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V10zM5 45a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V45zm0-35a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V10zm60 35a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V45zm0-35a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V10z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-    color: var(--just-white);
+    color: var(--off-white);
     font-size: 100%;
     
     /* Optimizacion texto navegador */
@@ -108,13 +108,15 @@ a {
 
 /**************** Colores ****************/
 .Color-Light        { color: var(--just-white);}
-.Color-Light-xx     { color: var(--light-xx);}
-.Color-Muted        { color: var(--Muted);}
+.Color-Off-White     { color: var(--off-white);}
+.Color-Soft-Orange     { color: var(--soft-orange);}
+.Color-Muted        { color: var(--grey);}
 
-.BK-Color-Light        { background-color: var(--light);}
-.BK-Color-Light-xx     { background-color: var(--light-xx);}
-.BK-Color-Gray-xx     { background-color: var(--Gray-xx);}
-.BK-Color-Gray-x       { background-color: var(--Gray-x);}
+.Bk-Color-Light        { background-color: var(--just-white);}
+.Bk-Color-Off-White     { background-color: var(--off-white);}
+.Bk-Color-Soft-Orange    { background-color: var(--soft-orange);}
+.Bk-Color-Muted       { background-color: var(--grey);}
+
 
 
 /**************** Codigo Proyecto ****************/
@@ -133,6 +135,7 @@ a {
     color: var(--grey);
   }
 
+
 /* Navigation */
 .nav-main {
     position: relative;
@@ -144,9 +147,10 @@ a {
     font-size: 17px;
 }
 
-.nav-brand {
+.nav-main .nav-brand {
     width: 50px;
 }
+
 
 /* Nav Left */
 .nav-main ul {
@@ -166,7 +170,8 @@ a {
     color: var(--just-white);
 }
 
-/* Modificador Especial */
+
+/* Modificador Especial Linea ANimada de menu */
 .nav-menu__hover-line::after {
     content: '';
     display: block;
@@ -178,4 +183,68 @@ a {
 .nav-menu__hover-line:hover::after {
     width: 100%;
     transition: width 0.4s;
+}
+
+
+/*  Showcase  */
+.showcase {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    text-align: center;
+    width: 100%;
+    height: calc(100vh - 70px);
+    padding-bottom: 77px;
+    /* BK-Imagen */
+    background-image: url('/img/showcase2.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.showcase h2 { 
+    margin-bottom: 10px; 
+    font-size: 30px; 
+    font-weight: 700; 
+}
+.showcase p { 
+    width: 90%;
+    margin-bottom: 25px; 
+    font-weight: 300;
+}
+.showcase .btn {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    padding: 10px 20px;
+    font-size: 15px;
+    font-weight: 600;
+    border: 1px solid var(--grey);
+    background-color: var(--warm-black);
+    border-radius: 4px;
+    transition: 0.3s all;
+}
+.showcase .btn:hover {
+    padding: 10px 27px;
+    color: var(--just-white);
+    border: 1px solid var(--just-white);
+    border-radius: 12px;
+}
+
+/* Modificador Especial btn span*/
+.showcase .btn span:nth-child(1) {
+    margin-right: 9px;
+    transition: 0.3s all; 
+}
+.showcase .btn span:nth-child(1):hover {
+    margin-right: 15px;
+}
+.showcase .btn span:nth-child(2) {
+    font-size: 19px;
+    color: var(--red-orange);
+    transition: 0.3s all;
+}
+.showcase .btn span:nth-child(2):hover {
+    margin-left: 7px;
 }
