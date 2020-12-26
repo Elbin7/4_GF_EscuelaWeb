@@ -7,7 +7,7 @@
 */
 
 :root {
-    /* Colores */
+    /* Colores Var */
 --red-orange: #f73b1a;
 --soft-orange: #ffe9d5;
 --secondary-blue: #1a9af7;
@@ -28,7 +28,7 @@
 html {
     font-family: 'Titillium Web', sans-serif;
     background-color: var(--black);
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='105' viewBox='0 0 80 105'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='death-star' fill='%23540606' fill-opacity='0.4'%3E%3Cpath d='M20 10a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V10zm15 35a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V45zM20 75a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V75zm30-65a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V10zm0 65a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V75zM35 10a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V10zM5 45a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V45zm0-35a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V10zm60 35a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V45zm0-35a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V10z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='105' viewBox='0 0 80 105'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='death-star' fill='%23540606' fill-opacity='0.15'%3E%3Cpath d='M20 10a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V10zm15 35a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V45zM20 75a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V75zm30-65a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V10zm0 65a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V75zM35 10a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V10zM5 45a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V45zm0-35a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V10zm60 35a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V45zm0-35a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V10z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
     color: var(--off-white);
     font-size: 100%;
     
@@ -119,7 +119,7 @@ a {
 
 
 
-/**************** Codigo Proyecto ****************/
+/**************** Código Proyecto ****************/
 
 body header {
     background-color: #0f01019a;
@@ -188,14 +188,16 @@ a {
 
 /*  Showcase  */
 .showcase {
+    /*  Box-Model  */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
+    /*  Visuales  */
     text-align: center;
     width: 100%;
-    height: calc(100vh - 70px);
-    padding-bottom: 77px;
+    height: calc(100vh - 68px);
+    padding-bottom: 137px;
     /* BK-Imagen */
     background-image: url('/img/showcase2.jpg');
     background-position: center;
@@ -204,25 +206,30 @@ a {
 }
 .showcase h2 { 
     margin-bottom: 10px; 
-    font-size: 30px; 
+    font-size: 37px; 
     font-weight: 700; 
 }
 .showcase p { 
     width: 90%;
-    margin-bottom: 25px; 
+    margin-bottom: 25px;
+    font-size: 19px; 
     font-weight: 300;
+    color: var(--soft-orange);
 }
 .showcase .btn {
-    cursor: pointer;
+    /*  Box-Model  */
     display: flex;
     justify-content: space-between;
     align-items:center;
+    /* Visuales  */
     padding: 10px 20px;
     font-size: 15px;
     font-weight: 600;
     border: 1px solid var(--grey);
     background-color: var(--warm-black);
     border-radius: 4px;
+    /* Otros */
+    cursor: pointer;
     transition: 0.3s all;
 }
 .showcase .btn:hover {
@@ -247,4 +254,34 @@ a {
 }
 .showcase .btn span:nth-child(2):hover {
     margin-left: 7px;
+}
+
+
+/* Card de Noticias */
+.news-card {
+    /* Box Model - Position*/
+    display: grid;
+    gap: 25px;
+    grid-template-columns: repeat(4, 1fr);
+    /*Visuales*/
+    margin: 30px 0;
+}
+.news-card--cards img {
+    /* Visuales */
+    width: 100%;
+    height: auto;
+    max-height: 196px;
+}
+.news-card--cards h3 {
+    /*visuales*/
+    margin: 9px 0;
+    font-size: 21px;
+    font-weight: 700;
+}
+.news-card--cards p {
+    /*Visuales*/
+    margin-bottom: 7px;
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--grey);
 }
